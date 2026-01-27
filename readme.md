@@ -69,6 +69,7 @@ sudo apt install dialog
 ---
 
 ## 4. První dialog – Infobox
+<img width="692" height="497" alt="image" src="https://github.com/user-attachments/assets/92da4609-45d0-46b8-9b15-6edd5f804b3c" />
 
 ```bash
 #!/bin/bash
@@ -99,6 +100,7 @@ dialog --title "Název" --backtitle "Pozadí" TYP_DIALOGU parametry
 ---
 
 ## 6. MessageBox (msgbox)
+<img width="692" height="497" alt="image" src="https://github.com/user-attachments/assets/fe142a55-47ee-4f89-9115-26f455171576" />
 
 ```bash
 #!/bin/bash
@@ -110,6 +112,8 @@ dialog --title "Zpráva" --msgbox "Toto je důležitá informace." 7 50
 ---
 
 ## 7. Yes/No dialog
+<img width="692" height="497" alt="image" src="https://github.com/user-attachments/assets/5c5771fb-2104-4c01-97e5-b5f455be9288" />
+
 
 ```bash
 #!/bin/bash
@@ -128,6 +132,7 @@ esac
 ---
 
 ## 8. InputBox – vstup od uživatele
+<img width="692" height="497" alt="image" src="https://github.com/user-attachments/assets/ad524d05-421b-4e32-81ff-4c272522aa55" />
 
 ```bash
 #!/bin/bash
@@ -142,6 +147,7 @@ echo "Vítej $jmeno"
 ---
 
 ## 9. Menu
+<img width="692" height="497" alt="image" src="https://github.com/user-attachments/assets/2a16df9d-b25c-4cf8-9105-f6aeee49091d" />
 
 ```bash
 #!/bin/bash
@@ -162,6 +168,7 @@ esac
 ---
 
 ## 10. Kalendář
+<img width="692" height="497" alt="image" src="https://github.com/user-attachments/assets/3b309a45-131b-4d05-bafa-7bbb0c4115cb" />
 
 ```bash
 #!/bin/bash
@@ -174,6 +181,8 @@ echo "Vybrané datum: $datum"
 ---
 
 ## 11. Formulář (Form)
+<img width="692" height="497" alt="image" src="https://github.com/user-attachments/assets/9b398954-584b-477d-ab40-84025a2514ff" />
+
 
 ```bash
 #!/bin/bash
@@ -187,12 +196,12 @@ rm -f /tmp/form.$$
 
 ---
 
-## 12. Doporučení pro studenty
+## 12. Doporučení
 
 - vždy používej `#!/bin/bash`
 - uklízej dočasné soubory (`/tmp`)
-- testuj návratové hodnoty (`$?`)
-- skript dělej **čitelný a komentovaný**
+- testuj návratové hodnoty (`$?`) zejména textové vstupy od uživatelů
+- skript pište **čitelný a komentovaný**
 
 ---
 
@@ -203,8 +212,4 @@ Pomocí utility **dialog** lze:
 - zlepšit ovladatelnost skriptů
 - simulovat jednoduché aplikace v terminálu
 
-👉 Ideální pro výuku základů skriptování v Linuxu.
-
 ---
-
-*Autor: studijní materiál pro výuku Bash*
