@@ -66,6 +66,11 @@ Na systémech Debian/Ubuntu:
 sudo apt install dialog
 ```
 
+
+případně doinstalujeme chybějící balíček kalendář (´cal´)
+```bash
+sudo apt install ncal
+```
 ---
 
 ## 4. První dialog – Infobox
