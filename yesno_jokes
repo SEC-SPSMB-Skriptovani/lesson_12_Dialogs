@@ -1,0 +1,39 @@
+#!/bin/sh
+# $Id: yesno,v 1.9 2010/01/14 01:11:11 tom Exp $
+
+. ./setup-vars
+
+DIALOG_ERROR=254
+export DIALOG_ERROR
+
+#!/bin/bash
+
+get_chuck_joke() {
+  local joke=$(curl -s https://api.chucknorris.io/jokes/random | jq -r '.value')
+  echo "🤣 $joke"
+}
+
+joke=$(get_chuck_joke)
+echo "$joke"
+
+$DIALOG --title "YES/NO BOX" --clear "$@" \
+        --yesno "$joke" 15 61
+
+retval=$?
+
+case ${retval:-0} in
+  $DIALOG_OK)
+   /bin/bash yesno;;
+  $DIALOG_CANCEL)
+    echo "NO";;
+  $DIALOG_HELP)
+    echo "Help pressed.";;
+  $DIALOG_EXTRA)
+    echo "Extra button pressed.";;
+  $DIALOG_ITEM_HELP)
+    echo "Item-help button pressed.";;
+  $DIALOG_ERROR)
+    echo "ERROR!";;
+  $DIALOG_ESC)
+    echo "ESC pressed.";;
+esac
