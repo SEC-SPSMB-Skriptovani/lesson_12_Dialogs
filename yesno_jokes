@@ -6,8 +6,6 @@
 DIALOG_ERROR=254
 export DIALOG_ERROR
 
-#!/bin/bash
-
 get_chuck_joke() {
   local joke=$(curl -s https://api.chucknorris.io/jokes/random | jq -r '.value')
   echo "🤣 $joke"
